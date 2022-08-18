@@ -1,7 +1,6 @@
 package hello.core.lifecycle;
 
 import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
 
 public class NetworkClient {
 
@@ -37,7 +36,6 @@ public class NetworkClient {
         call("초기화 연결 메세지");
     }
 
-    @PreDestroy
     public void close() {
         System.out.println("NetworkClient.destroy");
         disconnect();
